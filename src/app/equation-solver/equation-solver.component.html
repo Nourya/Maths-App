@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+      <h2 class="text-center mb-4 text-primary">Résolution d'Équation Quadratique</h2>
+      <form (ngSubmit)="solve()">
+        <div class="mb-3">
+          <label class="form-label">a :</label>
+          <input type="number" class="form-control" [(ngModel)]="a" name="a" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">b :</label>
+          <input type="number" class="form-control" [(ngModel)]="b" name="b" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">c :</label>
+          <input type="number" class="form-control" [(ngModel)]="c" name="c" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Résoudre</button>
+      </form>
+  
+      <div *ngIf="solution" class="alert alert-success mt-4 text-center">
+        <strong>Résultat :</strong> {{ solution }}
+      </div>
+    </div>
+  </div>
+  
